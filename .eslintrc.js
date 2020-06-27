@@ -23,4 +23,21 @@ module.exports = {
   ],
   rules: {
   },
+  overrides: [
+    {
+      files: [
+        'src/**/*.test.js',
+        'src/**/*.test.jsx',
+        'src/setupTests.js',
+      ],
+      plugins: ['jest'],
+      rules: {
+        'import/no-extraneous-dependencies': 0,
+        'import/prefer-default-export': 0,
+      },
+      env: {
+        'jest/globals': true,
+      },
+    },
+  ],
 };
