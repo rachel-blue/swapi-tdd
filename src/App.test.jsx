@@ -8,3 +8,10 @@ it('should render the page', () => {
 
   expect(app.length).toBe(1);
 });
+
+it('should render the search page', () => {
+  const wrapper = shallow(<App />);
+  const search = wrapper.find('[data-test="app__search"]');
+
+  expect(search.length).toBe(1);
+});
